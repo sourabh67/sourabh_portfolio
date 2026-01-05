@@ -12,6 +12,10 @@
 }
 
 *{box-sizing:border-box;margin:0;padding:0}
+html {
+  scroll-behavior: smooth;
+}
+
 
 body{
   font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;
@@ -105,3 +109,4 @@ footer{
 @media(max-width:900px){
   .hero,.grid{grid-template-columns:1fr}
 }
+
