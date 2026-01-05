@@ -1,3 +1,6 @@
+/* ==============================
+   ROOT VARIABLES
+================================ */
 :root{
   --bg-dark:#050812;
   --bg-mid:#0a0f1e;
@@ -11,7 +14,9 @@
   --max:1100px;
 }
 
-/* Reset */
+/* ==============================
+   RESET & BASE
+================================ */
 *{
   box-sizing:border-box;
   margin:0;
@@ -35,14 +40,22 @@ a{
   font-weight:600;
 }
 
-/* Layout */
+/* ==============================
+   LAYOUT
+================================ */
 .container{
   max-width:var(--max);
   margin:auto;
   padding:24px;
 }
 
-/* Header */
+section{
+  position:relative;
+}
+
+/* ==============================
+   HEADER / NAVBAR
+================================ */
 header{
   position:sticky;
   top:0;
@@ -58,24 +71,100 @@ header{
   align-items:center;
 }
 
-nav a{
+.nav a{
   margin-left:16px;
   color:var(--muted);
 }
 
-nav a:hover{
+.nav a:hover{
   color:var(--text);
 }
 
-/* Hero */
-.hero{
-  display:grid;
-  grid-template-columns:1.3fr 1fr;
-  gap:24px;
-  padding:64px 0;
+/* ==============================
+   HERO PROFILE (MAIN)
+================================ */
+.hero-profile{
+  padding:90px 0 40px;
 }
 
-/* Cards */
+.profile-card{
+  background:linear-gradient(
+    180deg,
+    rgba(15,23,42,0.95),
+    rgba(15,23,42,0.85)
+  );
+  border:1px solid var(--border);
+  border-radius:28px;
+  padding:42px;
+}
+
+.profile-header{
+  display:flex;
+  gap:24px;
+  align-items:center;
+  margin-bottom:24px;
+}
+
+.profile-avatar{
+  width:96px;
+  height:96px;
+  border-radius:50%;
+  border:3px solid var(--accent);
+  object-fit:cover;
+}
+
+.profile-name{
+  font-size:42px;
+  margin-bottom:4px;
+}
+
+.profile-role{
+  color:var(--accent);
+  font-weight:600;
+}
+
+.profile-intro{
+  color:var(--muted);
+  font-size:16px;
+  max-width:820px;
+  margin-bottom:28px;
+}
+
+.profile-actions{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+  margin-bottom:26px;
+}
+
+.profile-tags span{
+  display:inline-block;
+  margin:6px 6px 0 0;
+  padding:8px 14px;
+  border:1px solid var(--border);
+  border-radius:999px;
+  font-size:13px;
+  color:var(--muted);
+}
+
+.profile-status{
+  margin-top:28px;
+  padding:18px;
+  border-radius:16px;
+  background:rgba(96,165,250,0.08);
+  border:1px solid rgba(96,165,250,0.25);
+  font-size:14px;
+  color:var(--muted);
+}
+
+.profile-status .highlight{
+  color:var(--text);
+  font-weight:600;
+}
+
+/* ==============================
+   GENERIC CARDS
+================================ */
 .card{
   background:var(--surface);
   border:1px solid var(--border);
@@ -89,7 +178,9 @@ nav a:hover{
   box-shadow:0 20px 40px rgba(0,0,0,0.4);
 }
 
-/* Typography */
+/* ==============================
+   TYPOGRAPHY
+================================ */
 h1{
   font-size:40px;
   margin-bottom:12px;
@@ -104,24 +195,15 @@ h2{
   color:var(--muted);
 }
 
-/* Tags */
-.tags span{
-  display:inline-block;
-  margin:6px 6px 0 0;
-  padding:6px 12px;
-  border:1px solid var(--border);
-  border-radius:999px;
-  font-size:13px;
-  color:var(--muted);
-}
-
-/* Buttons */
+/* ==============================
+   BUTTONS
+================================ */
 .btn{
   display:inline-block;
-  margin-top:16px;
   padding:12px 20px;
   border-radius:14px;
   border:1px solid var(--border);
+  color:var(--text);
 }
 
 .btn.primary{
@@ -130,27 +212,18 @@ h2{
   font-weight:700;
 }
 
-/* Grid */
+/* ==============================
+   GRID
+================================ */
 .grid{
   display:grid;
   grid-template-columns:repeat(2,1fr);
   gap:20px;
 }
 
-.project a{
-  display:inline-block;
-  margin-top:10px;
-}
-
-/* Footer */
-footer{
-  text-align:center;
-  color:var(--muted);
-  padding:40px 0;
-  border-top:1px solid var(--border);
-}
-
-/* Services */
+/* ==============================
+   SERVICES
+================================ */
 .services{
   padding:80px 0;
   text-align:center;
@@ -233,7 +306,9 @@ footer{
   color:var(--accent);
 }
 
-/* Contact */
+/* ==============================
+   CONTACT
+================================ */
 .contact{
   padding:90px 0;
 }
@@ -312,107 +387,33 @@ footer{
   border:1px solid rgba(96,165,250,0.25);
 }
 
-/* Responsive */
+/* ==============================
+   FOOTER
+================================ */
+footer{
+  text-align:center;
+  color:var(--muted);
+  padding:40px 0;
+  border-top:1px solid var(--border);
+}
+
+/* ==============================
+   RESPONSIVE
+================================ */
 @media(max-width:900px){
-  .hero,
   .grid,
   .services-grid,
   .contact-grid{
     grid-template-columns:1fr;
   }
-}
 
-
-/* ===== HERO PROFILE ===== */
-
-.hero-profile {
-  padding: 90px 0 40px;
-}
-
-.profile-card {
-  background: linear-gradient(
-    180deg,
-    rgba(15,23,42,0.95),
-    rgba(15,23,42,0.85)
-  );
-  border: 1px solid var(--border);
-  border-radius: 28px;
-  padding: 42px;
-}
-
-.profile-header {
-  display: flex;
-  gap: 24px;
-  align-items: center;
-  margin-bottom: 24px;
-}
-
-.profile-avatar {
-  width: 96px;
-  height: 96px;
-  border-radius: 50%;
-  border: 3px solid var(--accent);
-  object-fit: cover;
-}
-
-.profile-name {
-  font-size: 42px;
-  margin-bottom: 4px;
-}
-
-.profile-role {
-  color: var(--accent);
-  font-weight: 600;
-}
-
-.profile-intro {
-  color: var(--muted);
-  font-size: 16px;
-  max-width: 820px;
-  margin-bottom: 28px;
-}
-
-.profile-actions {
-  display: flex;
-  gap: 14px;
-  flex-wrap: wrap;
-  margin-bottom: 26px;
-}
-
-.profile-tags span {
-  display: inline-block;
-  margin: 6px 6px 0 0;
-  padding: 8px 14px;
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  font-size: 13px;
-  color: var(--muted);
-}
-
-.profile-status {
-  margin-top: 28px;
-  padding: 18px;
-  border-radius: 16px;
-  background: rgba(96,165,250,0.08);
-  border: 1px solid rgba(96,165,250,0.25);
-  font-size: 14px;
-  color: var(--muted);
-}
-
-.profile-status .highlight {
-  color: var(--text);
-  font-weight: 600;
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-  .profile-header {
-    flex-direction: column;
-    align-items: flex-start;
+  .profile-header{
+    flex-direction:column;
+    align-items:flex-start;
   }
 
-  .profile-name {
-    font-size: 34px;
+  .profile-name{
+    font-size:34px;
   }
 }
 
