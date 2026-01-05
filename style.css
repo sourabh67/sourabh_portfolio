@@ -57,6 +57,16 @@ nav a:hover{color:var(--text)}
   border:1px solid var(--border);
   border-radius:var(--radius);
   padding:28px;
+  
+.card{
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
 }
 
 h1{font-size:40px;margin-bottom:12px}
@@ -109,4 +119,5 @@ footer{
 @media(max-width:900px){
   .hero,.grid{grid-template-columns:1fr}
 }
+
 
