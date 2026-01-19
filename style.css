@@ -102,16 +102,19 @@ header{
   display:flex;
   gap:24px;
   align-items:center;
-  margin-bottom:24px;
+  margin-bottom:20px;
 }
 
-.profile-avatar{
-  width:96px;
-  height:96px;
-  border-radius:50%;
-  border:3px solid var(--accent);
-  object-fit:cover;
+.profile-avatar img {
+  width: 120px;          /* control size */
+  height: 120px;
+  object-fit: cover;    /* crop nicely */
+  border-radius: 50%;   /* make it circular */
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  flex-shrink: 0;       /* prevent shrinking */
 }
+
 
 .profile-name{
   font-size:42px;
